@@ -10,11 +10,14 @@ based on/inspired by the work of [Tuor et al.](https://arxiv.org/abs/1712.00557)
 * transformer networks, based on [GPT](https://openai.com/blog/language-unsupervised/)/[GPT-2](https://openai.com/blog/better-language-models/)
 * dataset tools:
   * parse and tokenize log files into character-level features on-the-fly
+  * support for byte-pair and word encoding
+  * buffered reading from very large CSV files
 
 ## dependencies
 * python 3.7
 * pytorch
-* numpy
+* bpe
+* ruamel.yaml
 * click
 * tqdm
 
@@ -23,9 +26,9 @@ if you use pyenv+pipenv, there's a Pipfile to get you started :sparkles:
 ## todo
 * analysis tools:
   * evaluate model performance if labels are available
-* dataset tools:
-  * support for really large text files
-  * support for byte pair encoding, word-level encoding
+  * ranking/statistics of network and client scores
+* support for input from streaming sources
+* support for conditioning input on categorical features and metadata
 
 ## references
 * Recurrent language model: 
